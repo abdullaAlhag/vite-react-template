@@ -1,0 +1,23 @@
+export default function Contact() {
+  return (
+    <div className="min-h-screen bg-gray-50 py-20 px-6">
+      <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 bg-white p-10 rounded-[2.5rem] shadow-xl">
+        <div>
+          <h2 className="text-4xl font-bold mb-6">Get in Touch</h2>
+          <p className="text-gray-600 mb-8">Have questions about a specific medical device? Our team of experts is here to help.</p>
+          <div className="space-y-4">
+            <p className="flex items-center text-gray-700"><strong>Email:</strong> support@TechnoGermany.com</p>
+            <p className="flex items-center text-gray-700"><strong>Phone:</strong> +1 (800) MED-HELP</p>
+          </div>
+        </div>
+        <form className="space-y-4">
+          <input type="text" placeholder="Full Name" className="w-full p-4 bg-gray-50 rounded-xl outline-none focus:ring-2 focus:ring-blue-500 transition" />
+          <input type="email" placeholder="Email Address" className="w-full p-4 bg-gray-50 rounded-xl outline-none focus:ring-2 focus:ring-blue-500 transition" />
+          <textarea placeholder="How can we help?" rows={4} className="w-full p-4 bg-gray-50 rounded-xl outline-none focus:ring-2 focus:ring-blue-500 transition"></textarea>
+          <button className="w-full bg-blue-600 text-white font-bold py-4 rounded-xl hover:bg-blue-700 transition shadow-lg">Send Message</button>
+        </form>
+      </div>
+    </div>
+  );
+}
+

@@ -3,13 +3,28 @@
 	"name": "vite-react-template",
 	"main": "./src/worker/index.ts",
 	"compatibility_date": "2025-10-08",
-	"compatibility_flags": ["nodejs_compat"],
+	"compatibility_flags": [
+		"nodejs_compat"
+	],
 	"observability": {
 		"enabled": true
 	},
 	"upload_source_maps": true,
 	"assets": {
-		"directory": "./dist/client",
+		"directory": "./dist",
 		"not_found_handling": "single-page-application"
-	}
+	},
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_id": "bc90e521-852e-4065-9521-1f6d3e07b8c0",
+			"database_name": "medical-db"
+		}
+	],
+	"r2_buckets": [
+		{
+			"binding": "bucket",
+			"bucket_name": "bucket"
+		}
+	]
 }

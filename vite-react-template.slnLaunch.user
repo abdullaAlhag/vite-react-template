@@ -1,0 +1,17 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "vite-react-template.esproj",
+        "Action": "Start",
+        "DebugTarget": "localhost (Edge)"
+      },
+      {
+        "Path": "..\\..\\Bills\\Bills.csproj",
+        "Action": "Start",
+        "DebugTarget": "Windows Machine"
+      }
+    ]
+  }
+]

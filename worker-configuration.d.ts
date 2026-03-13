@@ -5,7 +5,9 @@ declare namespace Cloudflare {
 	interface GlobalProps {
 		mainModule: typeof import("./src/worker/index");
 	}
-	interface Env {
+    interface Env {
+        DB: D1Database;
+        bucket: R2Bucket;
 	}
 }
 interface Env extends Cloudflare.Env {}
