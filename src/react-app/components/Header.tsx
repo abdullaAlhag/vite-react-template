@@ -2,7 +2,7 @@
     // src/react-app/components/Header.tsx
     import { useState } from "react";
 import { Link } from "react-router-dom";
-import Logo from "../components/Logo";
+//import Logo from "../components/Logo";
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
 
@@ -17,8 +17,8 @@ export default function Header() {
                         {/*</div>*/}
                       {/*  <span className="ml-3 text-xl font-black text-gray-800 tracking-tight">Techno<span className="text-blue-600">Germany</span></span> */}
                     
-			  {/*<img src="/api/images/tgclogo.png"  className="w-full h-10 object-cover rounded-xl mb-2 group-hover:shadow-md transition" />	*/}
-<Logo /> 
+			  <img src="/api/images/tgclogo.png"  className="w-full h-20 object-cover rounded-xl mb-2 group-hover:shadow-md transition" />	
+{/*<Logo />*/}
 </Link>
 
                     {/* Desktop Navigation */}

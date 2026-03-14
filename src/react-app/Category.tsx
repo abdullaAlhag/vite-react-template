@@ -62,14 +62,14 @@ export default function Category() {
                                 <h3 className="text-xl font-bold text-gray-800 group-hover:text-blue-600 transition">
                                     {p.name}
                                 </h3>
-                                <div className="flex justify-between items-center mt-4 bg-gray-50 p-3 rounded-xl">
-                                    <span className="text-3xl font-black text-blue-600">
-                                        ${p.price.toLocaleString()}
-                                    </span>
-                                    <span className={`text-sm px-3 py-1 rounded-full ${p.stock > 0 ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}`}>
-                                        {p.stock > 0 ? `Available: ${p.stock}` : 'Not Available'}
-                                    </span>
-                                </div>
+                     {/*           <div className="flex justify-between items-center mt-4 bg-gray-50 p-3 rounded-xl">*/}
+                  {/*                  <span className="text-3xl font-black text-blue-600">*/}
+               {/*                         ${p.price.toLocaleString()}*/}
+            {/*                        </span>*/}
+         {/*                           <span className={`text-sm px-3 py-1 rounded-full ${p.stock > 0 ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}`}>*/}
+      {/*                                  {p.stock > 0 ? `Available: ${p.stock}` : 'Not Available'}*/}
+   {/*                                 </span>*/}
+{/*                                </div>*/}
                             </div>
                         </Link>
 

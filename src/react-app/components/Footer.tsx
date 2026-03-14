@@ -1,16 +1,17 @@
 // src/react-app/components/Footer.tsx
 import { Link } from "react-router-dom";
-
+import LogoFooter from "../components/LogoFooter";
 export default function Footer() {
     return (
-        <footer className="bg-gray-900 text-gray-300 pt-16 pb-8 mt-20">
+        <footer className="bg-sky-700 text-gray-50 pt-16 pb-8 mt-20">
             <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-12 border-b border-gray-800 pb-12 text-left">
 
                 <div className="md:col-span-1">
-                    <h2 className="text-white text-2xl font-black mb-6">Techno<span className="text-blue-500">Germany</span></h2>
-                    <p className="text-sm leading-relaxed text-gray-400">
-                        We provide the best medical solutions and high-quality equipment to ensure better healthcare across the region.
-                    </p>
+<LogoFooter />                  
+{/*  <h2 className="text-white text-2xl font-black mb-6">Techno<span className="text-blue-500">Germany</span></h2>*/}
+   {/*                 <p className="text-sm leading-relaxed text-gray-400">*/}
+      {/*                  We provide the best medical solutions and high-quality equipment to ensure better healthcare across the region.*/}
+         {/*           </p>*/}
                 </div>
 
                 <div>
@@ -48,8 +49,8 @@ export default function Footer() {
                 </div>
 
             </div>
-            <div className="text-center mt-8 text-xs text-gray-500 font-medium">
-                © 2026 Medical Store. All rights reserved. Developed by  <a href="https://www.facebook.com/abdulla.saleh3" className="text-blue-500 hover:underline">Abdullah Alhaj</a>
+            <div className="text-center mt-8 text-xs text-gray-50 font-medium">
+                © 2026 Medical Store. All rights reserved. Developed by  <a href="https://www.facebook.com/abdulla.saleh3" className="text-blue-200 hover:underline">Abdullah Alhaj</a>
             </div>
         </footer>
     );

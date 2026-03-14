@@ -93,7 +93,10 @@ build/Release
 # Dependency directories
 node_modules/
 jspm_packages/
-
+.wrangler/
+dist/
+bin/
+obj/
 # Snowpack dependency directory (https://snowpack.dev/)
 web_modules/
 

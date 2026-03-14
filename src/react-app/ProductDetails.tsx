@@ -39,11 +39,27 @@ export default function ProductDetails() {
             return ["https://placehold.co/400"]; // صورة افتراضية في حال الخطأ
         }
     };
+const handleOrderNow = (product: any) => {
+    const phoneNumber = "967777719800"; // اكتب الرقم هنا مع رمز الدولة بدون + أو 00
+    const message = `مرحباً، أود طلب المنتج التالي:
+الاسم: ${product.name}
+الرابط: ${window.location.origin}/product/${product.id}`;
+
+    // ترميز الرسالة لتكون متوافقة مع روابط URL
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
+    // فتح الرابط في نافذة جديدة
+    window.open(whatsappUrl, "_blank");
+};
+
+
     return (
        
         <div className="min-h-screen bg-white p-6" dir="ltr">
             <div className="max-w-6xl mx-auto">
                 <Link title="الرجوع" to="/" className="text-blue-600 mb-6 inline-block font-bold">← Back</Link>
+                        <Link to={`/category/${product.category}`} key={product.category}> Category : {product.category}</Link>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {/* معرض الصور في التفاصيل */}
@@ -64,15 +80,21 @@ export default function ProductDetails() {
                     </div>
                         {/* معلومات المنتج */}
                     <div className="flex flex-col justify-center">
-                        <Link to={`/category/${product.category}`} key={product.category}> Category : {product.category}</Link>
                         <h1 className="text-4xl font-black text-gray-900 mb-4">{product.name}</h1>
-                        <p className="text-3xl text-blue-600 font-bold mb-6">${product.price}</p>
+{/*                        <p className="text-3xl text-blue-600 font-bold mb-6">${product.price}</p>*/}
                         <div className="bg-gray-50 p-6 rounded-2xl mb-8">
                             <h3 className="font-bold mb-2">Description:</h3>
                             <p className="text-gray-600"> {product.description}</p>
                         </div>
-                        <button className="bg-blue-600 text-white py-4 rounded-xl text-xl font-bold hover:bg-blue-700 transition">Order Now</button>
-                    </div>
+                    {/*    <button className="bg-blue-600 text-white py-4 rounded-xl text-xl font-bold hover:bg-blue-700 transition">Order Now</button>*/}
+<button 
+    onClick={() => handleOrderNow(product)}
+    className="bg-green-500 text-white px-6 py-3 rounded-full font-bold flex items-center gap-2"
+>
+    <i className="fab fa-whatsapp"></i> Order Now
+</button>
+                   
+ </div>
                 </div>
 
                 {/* قسم المنتجات ذات الصلة */}
